@@ -27,7 +27,7 @@ export const summon = (who: string) => `Maker ${who}`;
 
 | Theme         | Background | Accent    |
 | ------------- | ---------- | --------- |
-| Villa Diodati | `#302218`  | `#03422f` |
+| Villa Diodati | `#12160f`  | `#03422f` |
 
 ---
 

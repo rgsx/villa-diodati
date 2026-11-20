@@ -1,7 +1,7 @@
 {
   "name": "villa-diodati",
   "displayName": "Villa Diodati",
-  "description": "A gothic dark theme for VS Code and Cursor in leather, moss and lab green, named after the Lake Geneva villa where Mary Shelley conceived Frankenstein.",
+  "description": "A gothic dark theme for VS Code and Cursor in near-black moss, veil teal and acid gold, named after the Lake Geneva villa where Mary Shelley conceived Frankenstein.",
   "version": "0.1.0",
   "license": "MIT",
   "engines": {
@@ -40,7 +40,7 @@
     "Themes"
   ],
   "galleryBanner": {
-    "color": "#302218",
+    "color": "#12160f",
     "theme": "dark"
   },
   "contributes": {

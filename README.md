@@ -1,6 +1,6 @@
 # Villa Diodati
 
-A gothic dark theme for Visual Studio Code and Cursor, named after the villa on Lake Geneva where, in the wet summer of 1816, Mary Shelley first conceived *Frankenstein; or, The Modern Prometheus*. Leather, moss, lab green and a single flash of lightning — built for long sessions at night.
+A gothic dark theme for Visual Studio Code and Cursor, named after the villa on Lake Geneva where, in the wet summer of 1816, Mary Shelley first conceived *Frankenstein; or, The Modern Prometheus*. Near-black moss, a teal veil, acid gold silk and a wine ribbon — built for long sessions at night.
 
 Villa Diodati is an independent theme and is not affiliated with or endorsed by the Shelley estate or any other *Frankenstein* adaptation.
 
@@ -8,11 +8,13 @@ The theme covers the current workbench and Cursor UI (chat and inline edits, com
 
 ## The theme
 
-**Villa Diodati** is a test theme built from a ten-color palette taken from Guillermo del Toro's *Frankenstein* shots: tan `#7c6545`, olive moss `#535a27`, dark olive `#363a19`, parchment `#c5be88`, leather brown `#302218`, olive-gold `#b5b253`, lab green `#03422f`, burgundy `#411d29`, dark gold `#5a5416` and dark brown `#472f17`.
+**Villa Diodati** is a test theme. The surfaces are a near-black mossy green-black, taken from a still in Guillermo del Toro's *Frankenstein*. The editor is `#12160f`; the sidebar and chrome are the slightly darker `#0d0e09`. Selections are a translucent veil teal, not a solid block.
 
-The dark tones stay as surfaces: the editor is leather brown, the sidebar and chrome are dark olive, selections are burgundy, and inactive selections lean lab green. Every syntax color is a lifted tint of one of those hues, so keywords are olive-gold, types pale moss, constants dusty rose, functions warm sand and strings cream parchment.
+Syntax is restrained. Two colors do most of the work: the veil's emerald teal (`#2aa58a` and its lifts) and the dress's acid gold (`#c8b83a`). Wine from the ribbon is reserved for constants and diagnostics. The default foreground is a desaturated parchment, from `#c5be88`, so it does not glare on the dark moss.
 
-One color sits outside the palette: spark `#a8e6f2`, an electric pale cyan used only for the cursor, matching bracket highlights and find matches.
+The spark is `#8fe0c8`, a lifted bright veil teal, used only for the cursor, matching bracket highlights and find matches.
+
+The original ten-color palette (tan `#7c6545`, olive moss `#535a27`, dark olive `#363a19`, parchment `#c5be88`, leather brown `#302218`, olive-gold `#b5b253`, lab green `#03422f`, burgundy `#411d29`, dark gold `#5a5416`, dark brown `#472f17`) is still the source of several roles, alongside colors sampled from the shot.
 
 # Installation
 
@@ -40,13 +42,13 @@ To try changes, open the folder in VS Code or Cursor and press F5. The `demo/` f
 
 ## Contrast
 
-Measured against the editor background `#302218` (WCAG contrast ratio):
+Measured against the editor background `#12160f` (WCAG contrast ratio):
 
 | Theme         | Syntax colors  | Comments | Line numbers | White on buttons |
 | ------------- | -------------- | -------- | ------------ | ---------------- |
-| Villa Diodati | 5.52:1 or more | 3.16:1   | 3.16:1       | 11.51:1          |
+| Villa Diodati | 4.59:1 or more | 3.34:1   | 3.34:1       | 11.51:1          |
 
-In the terminal, the character under a block cursor stays visible, and bright blue matches the lab-green buttons so labels shown on it keep white text. The spark cursor is `#a8e6f2` (11.16:1 on the editor).
+In the terminal, the character under a block cursor stays visible, and bright blue matches the lab-green buttons so labels shown on it keep white text. The spark cursor is `#8fe0c8` (11.91:1 on the editor).
 
 # Changelog
 
