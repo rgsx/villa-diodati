@@ -1,9 +1,6 @@
 # Villa Diodati
 
-<!-- Logo: assets/images/villa-diodati-logo.png. Uncomment when the icon is in the repo. -->
-<!--
 <p align="center"><img src="https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/images/villa-diodati-logo.png" width="100" height="100"></p>
--->
 
 Gothic dark themes for Visual Studio Code and Cursor, named after the villa on Lake Geneva where, in the wet summer of 1816, Mary Shelley first conceived *Frankenstein; or, The Modern Prometheus*. Near-black moss, a teal veil and acid gold silk, built for long sessions at night.
 
@@ -22,19 +19,13 @@ Keywords are veil teal, functions acid gold, and constants a wine-rose. A lifted
 
 ## Villa Diodati
 
-<!-- Screenshots: drop full-window shots in assets/screenshots/src/ as diodati.png and diodati-2.png, then run `npm run screenshots`. Uncomment when the files are in the repo. -->
-<!--
 ![Villa Diodati in Cursor, split editors with TypeScript, CSS and Python, an inline diff, a git blame hover, split terminals and agent chat](https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/screenshots/diodati-1.png)
 ![Villa Diodati in Cursor, three Rust files side by side and split terminals](https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/screenshots/diodati-2.png)
--->
 
 ## Villa Diodati Crypt Black
 
-<!-- Screenshots: drop full-window shots in assets/screenshots/src/ as crypt.png and crypt-2.png, then run `npm run screenshots`. Uncomment when the files are in the repo. -->
-<!--
 ![Villa Diodati Crypt Black in Cursor, split editors with TypeScript, CSS and Python, an inline diff, a git blame hover, split terminals and agent chat](https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/screenshots/crypt-1.png)
 ![Villa Diodati Crypt Black in Cursor, three Rust files side by side and split terminals](https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/screenshots/crypt-2.png)
--->
 
 # Installation
 
