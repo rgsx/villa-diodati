@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Villa Diodati &amp; the wet summer of 1816</title>
+    <style>
+      body { background: #16161a; color: #c8c6c2; }
+      .spark:hover { color: var(--accent, #4a4a58); }
+    </style>
+  </head>
+
+  <body>
+    <!-- A comment from the villa on Lake Geneva -->
+    <main id="app" class="villa" data-year="1816">
+      <h1>A dreary night of November</h1>
+      <p>We will each write a <em>ghost story</em>, said Byron.</p>
+      <img src="diodati.png" alt="Villa Diodati on the lake" width="320" loading="lazy" />
+      <label for="name">Name</label>
+      <input id="name" type="text" required placeholder="Mary" />
+      <button type="button" class="spark" disabled>Begin</button>
+      <a href="https://example.com/journal" target="_blank" rel="noopener">Read the journal</a>
+    </main>
+
+    <script type="module">
+      const year = Number(document.querySelector('#app').dataset.year);
+      document.title = `${year}: Byron, Polidori, the Shelleys`;
+    </script>
+  </body>
+</html>

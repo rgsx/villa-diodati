@@ -1,0 +1,22 @@
+# Villa Diodati: YAML
+name: villa-diodati-demo
+on:
+  push:
+    branches: [master]
+defaults: &defaults
+  node: 20
+  cache: true
+jobs:
+  build:
+    <<: *defaults
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm ci
+      - run: npm run build:check
+    env:
+      YEAR: 1816
+      MOTTO: "a dreary night of November"
+      NOTES: |
+        It was on a dreary night of November
+        that I beheld the accomplishment of my toils.
+      DEBUG: ~

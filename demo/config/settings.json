@@ -1,0 +1,27 @@
+{
+  "name": "villa-diodati-demo",
+  "version": "0.1.0",
+  "private": true,
+  "year": 1816,
+  "ratio": 0.75,
+  "deprecated": null,
+  "keywords": ["frankenstein", "diodati", true, false, null, 1816],
+  "env": {
+    "es6": true,
+    "mocha": false,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  },
+  "makers": [
+    { "name": "Victor", "city": "Ingolstadt", "faith": 12 },
+    { "name": "Walton", "city": "Archangel", "faith": null },
+    { "name": "Clerval", "city": "Geneva", "faith": 8 }
+  ],
+  "places": ["Geneva", "Ingolstadt", "Mer de Glace", "Orkney", "Archangel"],
+  "escapes": "Line one\nTab\there \"quoted\" \u26A1"
+}

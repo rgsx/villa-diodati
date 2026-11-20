@@ -1,0 +1,351 @@
+// TextMate token colors shared by every theme.
+// p = theme palette (for per-theme differences), s = the theme's syntax colors.
+// Optional syntax slots fall back to a shared one: function and attribute -> constant,
+// parameter -> punctuation, regexp -> tag.
+'use strict';
+
+module.exports = (p, s) => {
+  const fn = s.function || s.constant;
+  const attribute = s.attribute || s.constant;
+  const parameter = s.parameter || s.punctuation;
+  const regexp = s.regexp || s.tag;
+  return [
+    {
+      scope: ['comment', 'punctuation.definition.comment'],
+      settings: { foreground: s.comment },
+    },
+    {
+      scope: ['variable.css', 'variable.argument.css', 'entity.other.attribute-name.pseudo-class.css'],
+      settings: { foreground: s.cssVariable },
+    },
+    {
+      scope: [
+        'keyword',
+        'keyword.control',
+        'storage',
+        'storage.type.annotation',
+        'storage.type.primitive',
+        'meta.selector',
+        'markup.changed',
+        'markup.link',
+        'source.cs keyword.operator',
+        'source.go storage.type.string',
+        'source.java keyword.operator.instanceof',
+        'source.js keyword.operator.js',
+        'source.js keyword.operator.delete',
+        'source.js keyword.operator.in',
+        'source.js keyword.operator.of',
+        'source.js keyword.operator.instanceof',
+        'source.js keyword.operator.new',
+        'source.js keyword.operator.typeof',
+        'source.js keyword.operator.void',
+        'source.python keyword.operator.logical.python',
+        'support.type.object.module.js',
+        'keyword.operator.accessor.js',
+      ],
+      settings: { foreground: s.keyword },
+    },
+    {
+      scope: ['punctuation.definition.italic', 'markup.italic'],
+      settings: { foreground: s.keyword, fontStyle: 'italic' },
+    },
+    {
+      scope: [
+        'entity.name.type',
+        'string.regexp source.ruby.embedded',
+        'support.class',
+        'entity.name.class',
+        'entity.name.type.class',
+        'source.java storage.modifier.import',
+        'source.java storage.type',
+        'support.type.primitive.ts',
+        'support.type.builtin.ts',
+        'entity.name.type.ts',
+        'entity.other.attribute-name.class.css',
+      ],
+      settings: { foreground: s.type },
+    },
+    {
+      scope: 'punctuation.definition.bold',
+      settings: { foreground: s.type, fontStyle: 'bold' },
+    },
+    {
+      scope: [
+        'keyword.other.unit',
+        'constant',
+        'constant.variable',
+        'constant.numeric',
+        'meta.link',
+        'markup.quote',
+      ],
+      settings: { foreground: s.constant },
+    },
+    {
+      scope: ['entity.name.function', 'support.function'],
+      settings: { foreground: fn },
+    },
+    {
+      scope: 'entity.other.attribute-name',
+      settings: { foreground: attribute },
+    },
+    {
+      scope: ['variable.parameter', 'source.python variable.parameter'],
+      settings: { foreground: parameter, ...(s.parameterItalic ? { fontStyle: 'italic' } : {}) },
+    },
+    {
+      scope: ['string.regexp', 'string.regexp punctuation.definition.string'],
+      settings: { foreground: regexp },
+    },
+    {
+      scope: 'markup.bold',
+      settings: { foreground: s.constant, fontStyle: 'bold' },
+    },
+    {
+      scope: ['support.function.misc.css', 'constant.language.json.comments'],
+      settings: { foreground: s.pink },
+    },
+    {
+      scope: [
+        'variable.language.this',
+        'variable.language.self.rust',
+        'variable.language.super.rust',
+        'storage.modifier.ts',
+        'entity.name.tag.css',
+        'source.ruby keyword.other.special-method.ruby',
+      ],
+      settings: { foreground: s.magenta },
+    },
+    {
+      scope: [
+        'entity.other.inherited-class',
+        'string',
+        'markup.inserted',
+        'markup.raw',
+        'source.json meta.structure.dictionary.json value.json string.quoted.json',
+        'source.json meta.structure.array.json value.json string.quoted.json',
+        'source.json meta.structure.dictionary.json value.json string.quoted.json punctuation',
+        'source.json meta.structure.array.json value.json string.quoted.json punctuation',
+        'entity.other.attribute-name.id.css',
+      ],
+      settings: { foreground: s.string },
+    },
+    {
+      scope: [
+        'constant.character.escape',
+        'constant.other.color',
+        'constant.other.symbol',
+        'source.ruby constant.other.symbol punctuation',
+        'source.json meta.structure.dictionary.json constant.language.json',
+        'source.json meta.structure.array.json constant.language.json',
+        'entity.name.tag.html',
+        'entity.name.tag.tsx',
+        'entity.name.tag.jsx',
+        'entity.name.tag.js.jsx',
+        'entity.name.tag.js',
+        'entity.name.tag.open.jsx',
+        'entity.name.tag.close.jsx',
+        'punctuation.definition.tag.begin.html',
+        'punctuation.definition.tag.end.html',
+        'punctuation.definition.tag.begin.js.jsx',
+        'punctuation.definition.tag.begin.js',
+        'punctuation.definition.tag.end.js.jsx',
+        'punctuation.definition.tag.end.js',
+        'meta.tag.jsx',
+        'support.type',
+      ],
+      settings: { foreground: s.tag },
+    },
+    {
+      scope: ['variable.interpolation', 'punctuation.section.embedded'],
+      settings: { foreground: s.interpolation },
+    },
+    {
+      scope: [
+        'support.class.component.open.jsx',
+        'support.class.component.close.jsx',
+        'support.class.component.js.jsx',
+        // Built-in VS Code grammars: JavaScript (.js) and TypeScriptReact (.tsx).
+        'support.class.component.js',
+        'support.class.component.tsx',
+      ],
+      settings: { foreground: s.component },
+    },
+    {
+      scope: [
+        'variable',
+        'entity.name.tag',
+        'meta.definition.variable',
+        'markup.deleted',
+        'markup.heading',
+        'source.ini keyword.other.definition.ini',
+        'source.java-properties meta.key-pair',
+        'source.json meta.structure.dictionary.json string.quoted.json',
+        'source.json meta.structure.dictionary.json string.quoted.json punctuation.string',
+      ],
+      settings: { foreground: s.variable },
+    },
+    {
+      scope: [
+        'keyword.operator',
+        'storage.modifier.package',
+        'storage.modifier.import',
+        'punctuation.definition.method-parameters',
+        'punctuation.definition.function-parameters',
+        'punctuation.definition.parameters',
+        'punctuation.definition.separator',
+        'punctuation.definition.array',
+        'punctuation.section.method',
+        'punctuation.section.class',
+        'punctuation.section.inner-class',
+        'meta.method-call',
+        'meta.method',
+        'meta.class.body',
+        'meta.separator',
+        'meta.tag',
+        'none',
+        'source.java-properties meta.key-pair punctuation',
+        'source.css property-name.support',
+        'source.css property-value.support',
+      ],
+      settings: { foreground: s.punctuation },
+    },
+    {
+      scope: [
+        'keyword.other.special-method',
+        'punctuation.definition.heading',
+        'punctuation.definition.identity',
+        'support.function.any-method',
+        'entity.name.section',
+        'entity.other.attribute-name.id',
+        'meta.require',
+        'markup.heading punctuation.definition.heading',
+        'source.gfm link entity',
+      ],
+      settings: { foreground: s.heading },
+    },
+    {
+      scope: 'underline',
+      settings: { fontStyle: 'underline' },
+    },
+    {
+      scope: 'invalid.deprecated',
+      settings: { foreground: s.deprecated, fontStyle: 'strikethrough' },
+    },
+    {
+      scope: 'invalid.illegal',
+      settings: { foreground: s.invalid },
+    },
+    {
+      scope: ['source.css property-name', 'source.css property-value'],
+      settings: { foreground: s.cssProperty },
+    },
+    // Vue: covers both Vue - Official (Vue.volar, *.html.vue) and znck.vue (*.vue-html, *.vue).
+    {
+      scope: [
+        'entity.name.tag.html.vue',
+        'entity.name.tag.template.html.vue',
+        'entity.name.tag.script.html.vue',
+        'entity.name.tag.style.html.vue',
+        'punctuation.definition.tag.begin.html.vue',
+        'punctuation.definition.tag.end.html.vue',
+        'entity.name.tag.vue-html',
+        'entity.name.section.vue',
+        'punctuation.definition.block.open.begin.vue',
+        'punctuation.definition.block.open.end.vue',
+        'punctuation.definition.block.close.begin.vue',
+        'punctuation.definition.block.close.end.vue',
+        'punctuation.definition.tag.open.begin.vue-html',
+        'punctuation.definition.tag.open.end.vue-html',
+        'punctuation.definition.tag.close.begin.vue-html',
+        'punctuation.definition.tag.close.end.vue-html',
+        'punctuation.definition.tag.self-closing.begin.vue-html',
+        'punctuation.definition.tag.self-closing.end.vue-html',
+      ],
+      settings: { foreground: s.tag },
+    },
+    {
+      scope: [
+        'keyword.control.conditional.vue',
+        'keyword.control.loop.vue',
+        'punctuation.attribute-shorthand.bind.html.vue',
+        'punctuation.attribute-shorthand.event.html.vue',
+        'punctuation.attribute-shorthand.slot.html.vue',
+        'entity.name.directive.vue-html',
+        'support.other.directive.builtin.vue-html',
+        'punctuation.definition.directive.prefix.vue-html',
+        'keyword.control.conditional.vue-html',
+        'keyword.control.loop.vue-html',
+        'keyword.other.binding.vue-html',
+        'keyword.other.event-handler.vue-html',
+        'keyword.other.model.vue-html',
+        'keyword.other.slot.vue-html',
+        'keyword.operator.binding-shorthand.vue-html',
+        'keyword.operator.event-handler-shorthand.vue-html',
+        'keyword.operator.slot-shorthand.vue-html',
+      ],
+      settings: { foreground: s.keyword },
+    },
+    {
+      scope: [
+        'entity.other.attribute-name.html.vue',
+        'entity.other.attribute-name.vue-html',
+        'entity.other.block-attribute-name.vue',
+        'variable.other.directive.argument.vue-html',
+      ],
+      settings: { foreground: attribute },
+    },
+    {
+      scope: [
+        'punctuation.definition.interpolation.begin.html.vue',
+        'punctuation.definition.interpolation.end.html.vue',
+        'punctuation.definition.tag.interpolation.begin.vue-html',
+        'punctuation.definition.tag.interpolation.end.vue-html',
+      ],
+      settings: { foreground: s.interpolation },
+    },
+    {
+      scope: [
+        'variable.other.directive.modifier.vue-html',
+        'punctuation.definition.tag.directive.modifier.begin.vue-html',
+        'punctuation.separator.key-value.html.vue',
+        'punctuation.separator.key-value.vue-html',
+        'punctuation.separator.key-value.vue',
+      ],
+      settings: { foreground: s.punctuation },
+    },
+    // Rust (the built-in VS Code grammar).
+    {
+      scope: ['meta.interpolation.rust', 'punctuation.definition.interpolation.rust'],
+      settings: { foreground: s.interpolation },
+    },
+    {
+      // #[derive(...)], #![allow(...)]: the marker and plain words; derived traits keep the type color.
+      scope: ['meta.attribute.rust', 'punctuation.definition.attribute.rust', 'punctuation.brackets.attribute.rust'],
+      settings: { foreground: s.magenta },
+    },
+    {
+      scope: ['entity.name.module.rust', 'entity.name.namespace.rust'],
+      settings: { foreground: s.type },
+    },
+    {
+      scope: ['entity.name.function.macro.rust', 'entity.name.function.macro.rules.rust', 'entity.name.type.macro.rust'],
+      settings: { foreground: s.pink },
+    },
+    {
+      scope: ['entity.name.type.lifetime.rust', 'punctuation.definition.lifetime.rust'],
+      settings: { foreground: s.interpolation, fontStyle: 'italic' },
+    },
+    {
+      scope: 'keyword.operator.question.rust',
+      settings: { foreground: s.keyword },
+    },
+    {
+      scope: ['comment.line.documentation.rust', 'comment.block.documentation.rust'],
+      settings: { foreground: s.comment, fontStyle: 'italic' },
+    },
+    { scope: 'token.info-token', settings: { foreground: s.info } },
+    { scope: 'token.warn-token', settings: { foreground: s.warn } },
+    { scope: 'token.error-token', settings: { foreground: s.error } },
+    { scope: 'token.debug-token', settings: { foreground: s.debug } },
+  ];
+};

@@ -1,0 +1,18 @@
+# Only the runtime files ship in the .vsix:
+# package.json, README.md, CHANGELOG.md, LICENSE, themes/*.json and the icon.
+.vscode/**
+.vscode-test/**
+.git/**
+.github/**
+.gitignore
+.gitattributes
+.editorconfig
+node_modules/**
+src/**
+scripts/**
+demo/**
+*.vsix
+# README screenshots are linked from GitHub, so only the icon is packaged.
+assets/**
+!assets/images/villa-diodati-logo.png
+.cursor/**

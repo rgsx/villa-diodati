@@ -1,0 +1,55 @@
+{
+  "name": "villa-diodati",
+  "displayName": "Villa Diodati",
+  "description": "A gothic dark theme for VS Code and Cursor in leather, moss and lab green, named after the Lake Geneva villa where Mary Shelley conceived Frankenstein.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "publisher": "rgsx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rgsx/villa-diodati"
+  },
+  "homepage": "https://github.com/rgsx/villa-diodati#readme",
+  "bugs": {
+    "url": "https://github.com/rgsx/villa-diodati/issues"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:check": "node scripts/build.js --check",
+    "icons": "python3 scripts/make-icons.py",
+    "screenshots": "python3 scripts/make-screenshots.py",
+    "package": "npm run build && npx @vscode/vsce package",
+    "publish:ovsx": "npm run build && npx ovsx publish"
+  },
+  "keywords": [
+    "Theme",
+    "Dark Theme",
+    "Gothic",
+    "Frankenstein",
+    "Mary Shelley",
+    "Villa Diodati",
+    "Ingolstadt",
+    "Galvanism",
+    "Lightning",
+    "Cursor"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "galleryBanner": {
+    "color": "#302218",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Villa Diodati",
+        "uiTheme": "vs-dark",
+        "path": "./themes/villa-diodati-color-theme.json"
+      }
+    ]
+  }
+}
