@@ -73,8 +73,36 @@ export default {
   transition: 0.3s all ease-out;
 }
 
+button {
+  appearance: none;
+  border: 1px solid var(--accent, #4a4a58);
+  border-radius: 4px;
+  background: var(--villa, #16161a);
+  color: var(--glow);
+  padding: 0.55rem 1.1rem;
+  letter-spacing: 0.04em;
+  transition:
+    background 0.3s ease-out,
+    box-shadow 0.3s ease-out,
+    color 0.3s ease-out;
+}
+
+button:hover {
+  background: #22222a;
+  box-shadow: 0 0 0 1px var(--glow) inset;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--glow);
+  outline-offset: 2px;
+}
+
+button.disabled,
 button.disabled:hover {
   background: #2a2a32;
+  color: #6e6e78;
+  box-shadow: none;
   cursor: not-allowed;
+  opacity: 0.7;
 }
 </style>

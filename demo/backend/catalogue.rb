@@ -23,7 +23,7 @@ module Diodati
       @@count
     end
 
-    def <=>(other)
+    def <=>(other)  
       leaves <=> other.leaves
     end
 
