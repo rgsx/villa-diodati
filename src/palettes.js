@@ -138,4 +138,29 @@ const diodati = {
   syntax: diodatiSyntax,
 };
 
-module.exports = { syntax: diodatiSyntax, themes: [diodati] };
+
+// Villa Diodati Crypt Black: the same syntax on a near-black background with a faint moss tint.
+// Syntax colors are unchanged and gain about 7% contrast (keywords 6.41:1, comments 3.59:1).
+const diodatiCrypt = {
+  ...diodati,
+  id: 'diodatiCrypt',
+  name: 'Villa Diodati Crypt Black',
+  file: 'villa-diodati-crypt-black-color-theme.json',
+  bg: '#070805',
+  editorBg: '#0a0c08',
+  breadcrumbBackground: '#0a0c08',
+  contrastBg: '#0d2217', // 1.18:1, like Carfax Crypt
+  listSelection: '#0d2217',
+  border: '#151a0f', // 1.11:1
+  terminalBorder: '#151a0f',
+  indentGuide: '#151a0f',
+  suggestWidgetBorder: '#0d2217',
+  whitespace: '#151a0f',
+  areaBorder: '#12140e', // 1.06:1, quieter than the editor border
+  lineHighlightBackground: '#0c150e', // 1.06:1
+  selectionBackground: '#1f9a7a3a', // veil teal, a touch quieter than Villa Diodati so it still reads as a veil
+  inactiveSelectionBackground: '#1f9a7a20',
+  terminal: { ...diodati.terminal, ansiBlack: '#10120c', cursorBackground: '#0a0c08' },
+};
+
+module.exports = { syntax: diodatiSyntax, themes: [diodati, diodatiCrypt] };

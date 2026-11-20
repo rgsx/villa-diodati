@@ -6,10 +6,11 @@ Usage:
     python3 scripts/make-screenshots.py [--src DIR] [--out DIR] [--main-width 2056]
 
 Input: full-window screenshots named after the theme: diodati.png (main scene) and diodati-2.png
-(second scene). The case of the file name does not matter.
+(second scene), and the same for crypt. The case of the file name does not matter.
 Output, in assets/screenshots/:
   diodati-1.png  from diodati.png, scaled to --main-width (Lanczos)
   diodati-2.png  from diodati-2.png, same width
+  crypt-1.png    and crypt-2.png, likewise
 Themes without shots are skipped.
 Images are only scaled down, never up. Output is lossless, optimized PNG.
 
@@ -25,7 +26,7 @@ except ImportError:
     sys.exit('Pillow is required: pip3 install --user pillow')
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MAINS = ['diodati']
+MAINS = ['diodati', 'crypt']
 # Source suffix -> README shot number: diodati.png -> diodati-1.png, diodati-2.png -> diodati-2.png.
 SHOTS = [('', 1), ('-2', 2)]
 

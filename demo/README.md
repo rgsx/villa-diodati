@@ -7,7 +7,7 @@
 
 1. Open the **Extensions** view in VS Code or Cursor
 2. Search for `villa-diodati` and click _Install_
-3. Pick **Villa Diodati** under *Preferences: Color Theme*
+3. Pick **Villa Diodati** or **Villa Diodati Crypt Black** under *Preferences: Color Theme*
 
 See the [Open VSX listing](https://open-vsx.org/extension/rgsx/villa-diodati) or the [README][readme].
 
@@ -25,9 +25,10 @@ const year: number = 1816; // the wet summer at the villa
 export const summon = (who: string) => `Maker ${who}`;
 ```
 
-| Theme         | Background | Accent    |
-| ------------- | ---------- | --------- |
-| Villa Diodati | `#12160f`  | `#03422f` |
+| Theme                      | Background | Accent    |
+| --------------------------- | ---------- | --------- |
+| Villa Diodati             | `#12160f`  | `#03422f` |
+| Villa Diodati Crypt Black | `#0a0c08`  | `#03422f` |
 
 ---
 
