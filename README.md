@@ -1,24 +1,44 @@
 # Villa Diodati
 
-A gothic dark theme for Visual Studio Code and Cursor, named after the villa on Lake Geneva where, in the wet summer of 1816, Mary Shelley first conceived *Frankenstein; or, The Modern Prometheus*. Near-black moss, a teal veil, acid gold silk and a wine ribbon — built for long sessions at night.
+<!-- Logo: assets/images/villa-diodati-logo.png. Uncomment when the icon is in the repo. -->
+<!--
+<p align="center"><img src="https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/images/villa-diodati-logo.png" width="100" height="100"></p>
+-->
 
-Villa Diodati is an independent theme and is not affiliated with or endorsed by the Shelley estate or any other *Frankenstein* adaptation.
+Gothic dark themes for Visual Studio Code and Cursor, named after the villa on Lake Geneva where, in the wet summer of 1816, Mary Shelley first conceived *Frankenstein; or, The Modern Prometheus*. Near-black moss, a teal veil and acid gold silk, built for long sessions at night.
 
-The theme covers the current workbench and Cursor UI (chat and inline edits, command center, sticky scroll, bracket pairs, inlay hints, diffs and merge editor) and uses semantic highlighting.
+The palette is inspired by stills from Guillermo del Toro's *Frankenstein*. Villa Diodati is an independent theme and is not affiliated with or endorsed by the Shelley estate or any other *Frankenstein* adaptation.
 
-## The theme
+The themes cover the current workbench and Cursor UI (chat and inline edits, command center, sticky scroll, bracket pairs, inlay hints, diffs and merge editor) and use semantic highlighting.
 
-**Villa Diodati** is a test theme. The surfaces are a near-black mossy green-black, taken from a still in Guillermo del Toro's *Frankenstein*. The editor is `#12160f`; the sidebar and chrome are the slightly darker `#0d0e09`. Selections are a translucent veil teal, not a solid block.
+## The themes
 
-Syntax is restrained. Two colors do most of the work: the veil's emerald teal (`#2aa58a` and its lifts) and the dress's acid gold (`#c8b83a`). Wine from the ribbon is reserved for constants and diagnostics. The default foreground is a desaturated parchment, from `#c5be88`, so it does not glare on the dark moss.
+Both share one syntax palette and differ only in their backgrounds:
 
-The spark is `#8fe0c8`, a lifted bright veil teal, used only for the cursor, matching bracket highlights and find matches.
+- **Villa Diodati**: a mossy green-black background.
+- **Villa Diodati Crypt Black**: the same colors on a near-black background with a faint moss tint, for a little more contrast.
 
-The original ten-color palette (tan `#7c6545`, olive moss `#535a27`, dark olive `#363a19`, parchment `#c5be88`, leather brown `#302218`, olive-gold `#b5b253`, lab green `#03422f`, burgundy `#411d29`, dark gold `#5a5416`, dark brown `#472f17`) is still the source of several roles, alongside colors sampled from the shot.
+Keywords are veil teal, functions acid gold, and constants a wine-rose. A lifted veil teal is reserved for the cursor, matching brackets and find matches.
+
+## Villa Diodati
+
+<!-- Screenshots: drop full-window shots in assets/screenshots/src/ as diodati.png and diodati-2.png, then run `npm run screenshots`. Uncomment when the files are in the repo. -->
+<!--
+![Villa Diodati in Cursor, split editors with TypeScript, CSS and Python, an inline diff, a git blame hover, split terminals and agent chat](https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/screenshots/diodati-1.png)
+![Villa Diodati in Cursor, three Rust files side by side and split terminals](https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/screenshots/diodati-2.png)
+-->
+
+## Villa Diodati Crypt Black
+
+<!-- Screenshots: drop full-window shots in assets/screenshots/src/ as crypt.png and crypt-2.png, then run `npm run screenshots`. Uncomment when the files are in the repo. -->
+<!--
+![Villa Diodati Crypt Black in Cursor, split editors with TypeScript, CSS and Python, an inline diff, a git blame hover, split terminals and agent chat](https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/screenshots/crypt-1.png)
+![Villa Diodati Crypt Black in Cursor, three Rust files side by side and split terminals](https://raw.githubusercontent.com/rgsx/villa-diodati/master/assets/screenshots/crypt-2.png)
+-->
 
 # Installation
 
-Search for `villa-diodati` in the Extensions view of VS Code or Cursor ([Open VSX](https://open-vsx.org/extension/rgsx/villa-diodati)), install it, then pick **Villa Diodati** under Preferences: Color Theme (or run **Preferences: Color Theme** from the Command Palette).
+Search for `villa-diodati` in the Extensions view of VS Code or Cursor ([Open VSX](https://open-vsx.org/extension/rgsx/villa-diodati)), install it, then pick **Villa Diodati** or **Villa Diodati Crypt Black** under Preferences: Color Theme.
 
 To install a `.vsix` file instead, run **Extensions: Install from VSIX...** from the Command Palette, or use `cursor --install-extension villa-diodati-0.1.0.vsix` (`code --install-extension ...` for VS Code).
 
@@ -42,13 +62,14 @@ To try changes, open the folder in VS Code or Cursor and press F5. The `demo/` f
 
 ## Contrast
 
-Measured against the editor background `#12160f` (WCAG contrast ratio):
+Measured against each theme's editor background (WCAG contrast ratio):
 
-| Theme         | Syntax colors  | Comments | Line numbers | White on buttons |
-| ------------- | -------------- | -------- | ------------ | ---------------- |
-| Villa Diodati | 4.59:1 or more | 3.34:1   | 3.34:1       | 11.51:1          |
+| Theme                      | Syntax colors  | Comments | Line numbers | White on buttons |
+| -------------------------- | -------------- | -------- | ------------ | ---------------- |
+| Villa Diodati              | 4.59:1 or more | 3.34:1   | 3.34:1       | 11.51:1          |
+| Villa Diodati Crypt Black  | 4.92:1 or more | 3.59:1   | 3.59:1       | 11.51:1          |
 
-In the terminal, the character under a block cursor stays visible, and bright blue matches the lab-green buttons so labels shown on it keep white text. The spark cursor is `#8fe0c8` (11.91:1 on the editor).
+In the terminal, the character under a block cursor stays visible, and bright blue matches the lab-green buttons so labels shown on it keep white text.
 
 # Changelog
 

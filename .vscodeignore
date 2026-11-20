@@ -15,4 +15,5 @@ demo/**
 # README screenshots are linked from GitHub, so only the icon is packaged.
 assets/**
 !assets/images/villa-diodati-logo.png
+docs/**
 .cursor/**
